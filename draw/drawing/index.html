@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           h2{
+                margin-left: 230px;
+                text-align: left;
+                color: white;
+           }
+           .putt{
+               margin-left: 50px;
+               
+           }
+           .simp{
+               margin-top: 50px;
+           }
+           .paddd{
+               padding-top: 10px;
+               text-transform: capitalize;
+               font-weight: bold;
+               color: rgb(14, 84, 28);
+               font-size: large;
+           }
+        </style>
+        <meta charset="utf-8">
+        <title>Membuat Aplikasi Menggambar dengan JavaScript</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+
+        <!--jQuery UI south-street theme(green)-->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css">
+
+        <!--custom style-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!--title-->
+        <div id="header">Aplikasi Menggambar</div>
+        <!--input-->
+        <div class="inputContainer" >
+            <!--color-->
+            <div class="input" id="colorInput">
+                <input type="color" list id="paintColor">      
+            </div>
+            <!--line thickeness-->
+            <div class="input" id="thickenessInput">
+                <div id="circle"></div>
+            </div>
+            <!--slider-->
+            <div class="input">
+                <div id="slider"></div>
+            
+            </div>         
+        </div>
+        <form action="back_index.php" enctype="multipart/form-data" method="post" id="form">
+        <h2>Nama Gambar<input class="putt" type="text" name="nama_gambar"></h2>    
+        <!--canvas-->
+        <div id="canvasContainer">
+            <canvas id="paint" width="1000px" height="400px"></canvas>
+        </div>
+        <!-- buttons-->
+        <div class="btnContainer">
+            <!--Erase button -->
+            <div class="btnInput">
+                <span id="erase" class="button simp">Hapus</span>
+            </div>
+            <!--Save button -->
+            
+            <div class="btnInput">
+                <a href="../daftar_gambar_user.php"><input type="submit" value="SIMPAN" id="save" class="button paddd"></input></a>
+            </div></form>        
+            <!--Reset button -->
+            <div class="btnInput">
+                <span id="reset" class="button simp">Ulangi</span>
+            </div>       
+        </div>
+        <!-- jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- jQuery UI-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+        <!--javascript-->
+        <script src="javascript.js">
+        </script>
+    </body>
+</html>
